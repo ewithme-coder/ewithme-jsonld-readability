@@ -1,0 +1,101 @@
+{
+  "name": "ewithme-jsonld-readability",
+  "displayName": "eWith.me JSON-LD Schema & Readability Inspector",
+  "description": "Real-time Schema.org JSON-LD linter, Wikidata entity grounding verifier, Flesch readability & sentence burstiness analyzer, and SEO structured data snippets by eWith.me.",
+  "version": "1.1.2",
+  "publisher": "ewithme",
+  "author": {
+    "name": "eWith.me",
+    "url": "https://ewith.me"
+  },
+  "license": "MIT",
+  "homepage": "https://ewith.me",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ewithme-coder/ewithme-jsonld-readability.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ewithme-coder/ewithme-jsonld-readability/issues",
+    "email": "hr@ewith.me"
+  },
+  "icon": "icons/icon-128.png",
+  "galleryBanner": {
+    "color": "#1e1b4b",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Linters",
+    "Snippets",
+    "Formatters",
+    "Other"
+  ],
+  "keywords": [
+    "json-ld",
+    "schema.org",
+    "seo",
+    "readability",
+    "flesch-kincaid",
+    "structured-data",
+    "wikidata",
+    "burstiness",
+    "content-audit",
+    "ewithme"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ewithme.auditDocument",
+        "title": "eWith.me: Audit JSON-LD Schema & Readability"
+      },
+      {
+        "command": "ewithme.insertSchemaTemplate",
+        "title": "eWith.me: Insert JSON-LD Schema Template..."
+      },
+      {
+        "command": "ewithme.openWebTools",
+        "title": "eWith.me: Open Online AI Writing & SEO Studio"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "ewithme.auditDocument",
+          "group": "navigation@1"
+        },
+        {
+          "command": "ewithme.insertSchemaTemplate",
+          "group": "navigation@2"
+        }
+      ]
+    },
+    "snippets": [
+      {
+        "language": "html",
+        "path": "./snippets/jsonld-snippets.json"
+      },
+      {
+        "language": "json",
+        "path": "./snippets/jsonld-snippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/jsonld-snippets.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/jsonld-snippets.json"
+      },
+      {
+        "language": "markdown",
+        "path": "./snippets/jsonld-snippets.json"
+      }
+    ]
+  }
+}
